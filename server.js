@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
       socket.emit('authenticated', false);
     }
   });
-
+  console.log(`用户问题: ${msg}`);
   socket.on('chat message', async (msg) => {
     try {
       const response = await openai.chat.completions.create({
