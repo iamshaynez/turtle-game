@@ -1,0 +1,156 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#password-container, #game-selection, #chat-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+#game-selection {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#game-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#game-list li {
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#game-list li:hover {
+    background-color: #e8e8e8;
+}
+
+.game-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.game-puzzle {
+    font-size: 14px;
+    color: #666;
+}
+
+#chat-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#puzzle-text {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.message {
+    max-width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message.assistant {
+    background-color: #f8f8f8;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+#input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    #password-container, #game-selection, #chat-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #chat-container {
+        height: 95vh;
+    }
+
+    #input-container {
+        flex-direction: column;
+    }
+
+    #chat-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

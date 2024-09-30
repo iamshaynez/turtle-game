@@ -75,7 +75,7 @@ out/
 
 # Gatsby 文件
 .cache/
-public/
+
 
 # serverless 目录
 .serverless/

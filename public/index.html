@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多个海龟汤游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="password-container">
+        <input type="password" id="password-input" placeholder="输入密码">
+        <button id="submit-password">提交</button>
+    </div>
+
+    <div id="game-selection" style="display: none;">
+        <h2>选择一个游戏：</h2>
+        <ul id="game-list"></ul>
+    </div>
+
+    <div id="chat-container" style="display: none;">
+        <div id="puzzle-text"></div>
+        <div id="chat-messages"></div>
+        <div id="input-container">
+            <input type="text" id="chat-input" placeholder="输入你的问题...">
+            <button id="send-message">发送</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
