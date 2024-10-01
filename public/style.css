@@ -57,6 +57,27 @@ h1 {
     color: #555;
 }
 
+#changelog {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+#changelog h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#changelog p {
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
+}
+
 #password-input {
     width: 100%;
     padding: 12px;
