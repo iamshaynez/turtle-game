@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('chat message', async ({ gameId, message }) => {
-    console.log(`Game ID: ${gameId}, User message: ${message}`);
+    
     try {
       const game = games.find(g => g.id === gameId);
       if (!game) {
@@ -50,7 +50,7 @@ io.on('connection', (socket) => {
         ],
         temperature: 0.3,
       });
-
+      console.log(`Game ID: ${gameId}, User message: ${message}, Reply: ${response.choices[0].message.content}`);
       socket.emit('chat message', response.choices[0].message.content);
     } catch (error) {
       console.error('Error:', error);
