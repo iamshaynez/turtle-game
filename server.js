@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
           { role: "system", content: game.systemPrompt },
           { role: "user", content: message }
         ],
-        temperature: 0.3,
+        temperature: 0.2,
       });
       console.log(`Game ID: ${gameId}, User message: ${message}, Reply: ${response.choices[0].message.content}`);
       socket.emit('chat message', response.choices[0].message.content);
